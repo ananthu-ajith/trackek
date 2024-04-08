@@ -1,0 +1,12 @@
+<p>updatetask works!</p>
+<table>
+    <tbody>
+    <tr *ngFor="let task of abc; let i =index">
+        <td>{{task.taskname}}</td>
+        <td>{{task.description}}</td>
+        <td><button type="submit" (click)="delete(i)">Delete</button></td>
+        <td><button type="submit" (click)="update(i)">Update</button></td>
+    </tr>
+    
+</tbody>
+</table>
