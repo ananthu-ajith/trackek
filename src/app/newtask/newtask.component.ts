@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, } from '@angular/forms';
 import { TaskdetailsService } from '../taskdetails.service';
 
 @Component({
@@ -20,25 +20,39 @@ export class NewtaskComponent {
   ngOnInit()
   {
     this.form=this.fb.group({
-      taskname:['',Validators.required],
-      description:['',Validators.required]
+      taskname:[''],
+      description:['']
     })
   }
     submit(a:string,b:string)
   {
-  this.taskdetails.addtask(a,b)
+  if(a&&b)
+    {this.taskdetails.addtask(a,b)
   this.form.reset()
   console.log(this.taskdetails.updated);
-  
+    }
+
+    else
+    {
+      alert('All fields are mandatory')
+    }
   
   }
 
   abcd(a:string,b:string)
   {
+
+    if(a&&b)
+      {
     this.taskdetails.addtask(a,b)
     this.form.reset()
     console.log(this.taskdetails.updated);
     this.taskdetails.updated.splice(0,1)
+      }
+      else
+      {
+        alert('All fields are mandatory')
+      }
   }
 
   

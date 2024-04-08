@@ -9,8 +9,16 @@ export class TaskdetailsService {
   updated:any[]=[]
 
 
-  task=[{taskname:'abc',
-  description:'ascsdw'
+  task=[{taskname:'Task 1',
+  description:'Lorem ipsum dolor sit amet'
+
+  },
+  {taskname:'Task 2',
+  description:'Lorem ipsum dolor sit amet'
+
+  },
+  {taskname:'Task 3',
+  description:'Lorem ipsum dolor sit amet'
 
   }]
 

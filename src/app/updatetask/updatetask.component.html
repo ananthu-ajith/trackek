@@ -1,5 +1,12 @@
-<p>updatetask works!</p>
+<h3>List of All Tasks</h3>
+<div class="listtask">
 <table>
+    <thead>
+        <tr>
+        <th>Task</th>
+        <th>Description</th>
+    </tr>
+    </thead>
     <tbody>
     <tr *ngFor="let task of abc; let i =index">
         <td>{{task.taskname}}</td>
@@ -10,3 +17,4 @@
     
 </tbody>
 </table>
+</div>
